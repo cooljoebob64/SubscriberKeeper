@@ -44,6 +44,7 @@ public class SubscriberController {
     public String searchResults(Model model, @Param("keyword")String keyword){
         List<Subscriber> listSubscribers = service.searchByKeyword(keyword);
         model.addAttribute("listSubscribers", listSubscribers);
+        model.addAttribute("keyword", keyword);
 
         return "subscriber/searchResults";
     }
