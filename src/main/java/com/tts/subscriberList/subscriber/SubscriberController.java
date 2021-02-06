@@ -48,6 +48,11 @@ public class SubscriberController {
         return "subscriber/searchResults";
     }
 
+    @GetMapping(value="/search")
+    public String searchPage(){
+        return "subscriber/searchEntry";
+    }
+
 
 
 }
