@@ -44,7 +44,7 @@
 <h1>Welcome to Subscriber Keeper!</h1>
 
 <p>Please use the form below to sign up as a subscriber:</p>
-<form action="#" th:action="@{/}" th:object="${subscriber}" method="post">
+<form action="#" th:action="@{/}" th:object="${subscriber}" method="post" >
     <table>
         <tr>
             <td>First Name:</td>
@@ -57,6 +57,7 @@
         <tr>
             <td>Username:</td>
             <td><input type="text" th:field="*{userName}"/></td>
+            <td th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">Name Error</td>
         </tr>
         <tr>
             <td>
